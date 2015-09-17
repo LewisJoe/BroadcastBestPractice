@@ -17,7 +17,10 @@ public class ActivityCollector {
      * @param activity
      */
     public static void addActivity(Activity activity){
-        activities.add(activity);
+        //没有这个活动的时候才添加
+        if (!activities.contains(activity)){
+            activities.add(activity);
+        }
     }
 
     /**
